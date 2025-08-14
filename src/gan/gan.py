@@ -1,5 +1,4 @@
 import numpy as np
-from matplotlib import pyplot as plt
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
@@ -90,4 +89,4 @@ class GAN:
                     )
 
                 if epoch % 5 == 0 and i == 0:
-                    save_image(gen_imgs.data[:25], "img/epoch_%d.png" % epoch, nrow=5, normalize=True)
+                    save_image(gen_imgs.data[:25], "../img/gan_epoch_%d.png" % epoch, nrow=5, normalize=True)

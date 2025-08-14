@@ -2,7 +2,6 @@ from gan import GAN
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
-
 latent_dim = 64
 img_size = 28*28
 batch_size = 32
@@ -15,7 +14,7 @@ transform = transforms.Compose([
     transforms.Normalize([0.5], [0.5])
 ])
 
-dataset = datasets.MNIST(root="../data/mnist", train=True, transform=transform, download=True)
+dataset = datasets.MNIST(root="../../data/mnist", train=True, transform=transform, download=True)
 dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
 if __name__ == "__main__":
